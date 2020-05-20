@@ -1,0 +1,23 @@
+<!-- Copyright (c) 2020, salesforce.com, inc.
+All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
+For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause -->
+
+<template>
+        <lightning-card title="Stock Summary Info for:" icon-name="custom:custom63">
+            <h2 class="slds-text-heading--medium slds-p-left_small slds-p-vertical--medium">
+               {param}
+            </h2>
+            <p class="slds-p-horizontal_small"> <b>Employees :</b> {fullTime_Employees} </p>
+
+            <p class="slds-p-horizontal_small"> <b>Profit Margins :</b> {profit_Margins}</p>
+
+            <p class="slds-p-horizontal_small"> <b>Annual Revenue :</b> {yearly_Revenue}</p>
+
+            <p class="slds-p-horizontal_small"> <b>Annual Earnings :</b> {yearly_Earnings}</p>
+
+            <p class="slds-p-horizontal_small"> <b>Last Quarter's Revenue:</b> {recent_Quarter} </p>
+
+            <p slot="footer"> </p>
+    </lightning-card>
+</template>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account Intelligence LWC</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <namespacePrefix>StockSummary</namespacePrefix>
+    <types>
+        <members>PosttoMyNewHerokuWebService</members>
+        <members>PosttoMyNewHerokuWebServiceTest</members>
+        <members>PosttoMyNewHerokuWebServiceTestMockImpl</members>
+        <members>RapidApiCallout</members>
+        <members>RapidApiCalloutMockImpl</members>
+        <members>RapidApiCalloutTest</members>
+        <members>TalktoMyNewHerokuWebService</members>
+        <members>TalktoMyNewHerokuWebServiceMockImpl</members>
+        <members>TalktoMyNewHerokuWebServiceTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>displayAccountIntelligence</members>
+        <members>stockApex</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>48.0</version>
+</Package>

@@ -1,0 +1,79 @@
+<!-- Copyright (c) 2020, salesforce.com, inc.
+All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
+For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause -->
+
+<template>
+    <lightning-card title="My Account Intelligence" icon-name="custom:custom63">
+            <lightning-tabset>
+                <lightning-tab label="Job Categories Aggregate">
+                    <lightning-layout-item class="slds-text-heading--medium slds-p-left_small slds-p-vertical--medium">
+                                <lightning-button
+                                    label="Get Job Categories"
+                                    onclick={handleSearchClick}
+                                ></lightning-button>
+                    </lightning-layout-item>
+                        <template if:true={jobs}>
+                            <div class="slds-p-around_small slds-m-top_x-small lgc-bg">
+                                <p class="slds-p-horizontal_small"><b> </b></p>
+                                <p class="slds-p-horizontal_small" key={jobs.index}><b>Design: </b>{jobs.Design}</p>
+                                <p class="slds-p-horizontal_small" key={jobs.index}><b>Executive: </b>{jobs.Executive}</p>
+                                <p class="slds-p-horizontal_small" key={jobs.index}><b>Marketing: </b>{jobs.Marketing}</p>
+                                <p class="slds-p-horizontal_small" key={jobs.index}><b>Management: </b>{jobs.Management}</p>
+                                <p class="slds-p-horizontal_small" key={jobs.index}><b>Engineering/IT: </b>{jobs.EngineeringOrIT}</p>
+                                <p class="slds-p-horizontal_small" key={jobs.index}><b>Human Resources: </b>{jobs.HumanResources}</p>
+                                <p class="slds-p-horizontal_small" key={jobs.index}><b>Other: </b>{jobs.Other}</p>
+                                <p class="slds-p-horizontal_small"><b> </b></p>
+                            </div>
+                        </template>
+                        <template if:true={goGetCoffee}>
+                            <div class="demo-only demo-only demo-only_viewport" style="height:6rem">
+                                <div role="status" class="slds-spinner slds-spinner_medium">
+                                <span class="slds-assistive-text">Loading</span>
+                                <div class="slds-spinner__dot-a"></div>
+                                <div class="slds-spinner__dot-b"></div>
+                                </div>
+                            </div>
+                        </template>
+        
+                        <template if:true={error}>
+                            <p><b>Got an Error ... No Jobs found !</b></p>
+                        </template>
+                </lightning-tab>
+                <lightning-tab label="Executive Job Listings" title="2nd tab extended title">
+                     <lightning-layout-item class="slds-text-heading--medium slds-p-left_small slds-p-vertical--medium">
+                                <lightning-button
+                                    label="Get Executive Jobs"
+                                    onclick={handleJobsCategoriesSearchClick}
+                                ></lightning-button>
+                    </lightning-layout-item>
+
+                    <template if:true={jobsExecutives}>
+                        <div class="slds-m-top_medium slds-m-bottom_x-large">
+                             <template for:each={jobsExecutives} for:item="jobsExecutive" for:index="index">
+                                <div class="slds-p-around_small slds-m-top_x-small lgc-bg" key={jobsExecutive.id}>
+                                    <lightning-tile name="input1">
+                                        <p class="slds-truncate" title="Title: ">{jobsExecutive.title}</p>
+                                        <p class="slds-truncate" title="TimeSincePost: ">{jobsExecutive.timeSincePost}</p>
+                                    </lightning-tile>
+                                </div>
+                            </template>
+                            <template if:true={goGetCoffee}>
+                                <div class="demo-only demo-only demo-only_viewport" style="height:6rem">
+                                    <div role="status" class="slds-spinner slds-spinner_medium">
+                                    <span class="slds-assistive-text">Loading</span>
+                                    <div class="slds-spinner__dot-a"></div>
+                                    <div class="slds-spinner__dot-b"></div>
+                                    </div>
+                                </div>
+                            </template>
+            
+                            <template if:true={error}>
+                                <p><b>Got an Error ... No Jobs found !</b></p>
+                            </template>
+                        </div>
+                    </template>
+                </lightning-tab>                
+            </lightning-tabset>
+    </lightning-card>
+</template>
