@@ -10,6 +10,9 @@ In a separate card, we show executives & aggregate job listings by category.
 
 ## Contributors
  Chandra Nayak - mnayak@salesforce.com
+ 
  Oliver Wang - owang@salesforce.com
+ 
  Eric Chen - echen1@salesforce.com
+ 
  Pranav Bhatt - pbhatt@salesforce.com
