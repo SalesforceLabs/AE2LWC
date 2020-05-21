@@ -8,6 +8,9 @@ We pull public information on accounts such as financials (number of employees, 
 
 In a separate card, we show executives & aggregate job listings by category.
 
+Backend Code - https://github.com/ericc572/lwc_python_api
+
+
 ## Contributors
  Chandra Nayak - mnayak@salesforce.com
  
